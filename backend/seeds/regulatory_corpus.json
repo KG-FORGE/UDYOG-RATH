@@ -1,0 +1,422 @@
+[
+  {
+    "id": "PASSAGE_01",
+    "title": "Single Window Facilitation Framework (MAITRI 2.0)",
+    "authority": "Maharashtra Industry, Trade and Investment Facilitation Cell (MAITRI)",
+    "section_label": "Section 4 - Consolidated Application & Approvals",
+    "short_summary": "Under the Maharashtra Industry Facilitation Act, entrepreneurs can submit a Combined Application Form (CAF) covering over 40 industrial services across 16 state departments. All statutory approvals are issued through the unified single-window portal without requiring in-person visits to physical departmental offices.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["single window", "maitri", "caf", "combined application", "facilitation", "approvals"]
+  },
+  {
+    "id": "PASSAGE_02",
+    "title": "Right to Public Services Act (RTS Maharashtra)",
+    "authority": "Maharashtra State Right to Services Commission",
+    "section_label": "Section 3 & 7 - Mandated Time Bounds & Deemed Delivery",
+    "short_summary": "The Maharashtra Right to Public Services Act 2015 guarantees time-bound delivery of notified industrial approvals. If a competent authority fails to decide on an application within statutory SLA days without raising a lawful query, applicant can seek deemed approval or escalate to First Appellate Authority.",
+    "source_url": "https://aaplesarkar.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["right to services", "rts", "sla", "timelines", "deemed approval", "escalation", "appeals"]
+  },
+  {
+    "id": "PASSAGE_03",
+    "title": "Consent to Establish (CTE) Requirements",
+    "authority": "Maharashtra Pollution Control Board (MPCB)",
+    "section_label": "Water Act 1974 Sec 25 & Air Act 1981 Sec 21",
+    "short_summary": "Consent to Establish (CTE) is mandatory prior to initiating any site construction or plant erection for industries falling under Red, Orange, or Green pollution categories. Applications must be accompanied by detailed manufacturing process flowcharts, water balance sheets, and proposed effluent treatment plant (ETP) schemes.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["cte", "consent to establish", "mpcb", "pollution", "etp", "air", "water"]
+  },
+  {
+    "id": "PASSAGE_04",
+    "title": "Consent to Operate (CTO) & Renewal",
+    "authority": "Maharashtra Pollution Control Board (MPCB)",
+    "section_label": "Section 26 - Commissioning and Periodic Monitoring",
+    "short_summary": "Consent to Operate (CTO) must be secured after construction completion and before commencement of commercial manufacturing. MPCB verifies installation and trial functioning of environmental control equipment (ETP, STP, bag filters). Operating consents are granted for 1 to 5 years depending on industrial hazard classification.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["cto", "consent to operate", "mpcb", "trial run", "renewal", "pollution board"]
+  },
+  {
+    "id": "PASSAGE_05",
+    "title": "Hazardous Waste Handling Authorisation",
+    "authority": "Maharashtra Pollution Control Board (MPCB)",
+    "section_label": "Hazardous & Other Wastes Rules 2016 Rule 6",
+    "short_summary": "Any unit generating hazardous waste (such as spent solvents, chemical sludge, used oil, or contaminated containers) must obtain Authorisation in Form 2. The unit must demonstrate membership with a Common Hazardous Waste Treatment, Storage, and Disposal Facility (CHWTSDF) such as MEPL or MWML.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["hazardous waste", "tsdf", "mepl", "authorisation", "chemical waste", "mpcb"]
+  },
+  {
+    "id": "PASSAGE_06",
+    "title": "Provisional Fire Safety Clearance (Fire NOC)",
+    "authority": "Maharashtra Fire Services / MIDC Fire Brigade",
+    "section_label": "Maharashtra Fire Prevention Act 2006 Section 3",
+    "short_summary": "Provisional Fire NOC is required to validate architectural layout drawings against statutory fire safety codes prior to building sanction. The clearance specifies requirements for fire hydrant rings, underground static water reservoirs, fire detection systems, and dedicated wide perimeter access for emergency fire tenders.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["fire noc", "fire safety", "clearance", "midc fire", "hydrant", "evacuation"]
+  },
+  {
+    "id": "PASSAGE_07",
+    "title": "Final Fire Safety Certificate (Occupancy NOC)",
+    "authority": "Maharashtra Fire Services / MIDC Fire Brigade",
+    "section_label": "Form A/B Inspection and Testing Certificate",
+    "short_summary": "Prior to occupying an industrial building, the unit must obtain a Final Fire Certificate. A certified fire safety agency must submit Form A certifying that all firefighting installations (sprinklers, alarms, hose reels, pumps) have been fully erected and pressure-tested as per the provisional clearance.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["final fire noc", "occupancy", "fire certificate", "form a", "sprinklers"]
+  },
+  {
+    "id": "PASSAGE_08",
+    "title": "Factory Plan Approval",
+    "authority": "Directorate of Industrial Safety and Health (DISH)",
+    "section_label": "Factories Act 1948 Section 6 & Rule 3",
+    "short_summary": "Before constructing or extending any factory building employing 10 or more workers with power, plans must be approved by DISH. The drawings must verify adequate internal roadway width, clear machinery spacing, lighting, ventilation, and emergency exit routes conforming to safety standards.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["factory plan", "dish", "factories act", "safety", "ventilation", "spacing"]
+  },
+  {
+    "id": "PASSAGE_09",
+    "title": "Factory Licence Grant and Registration",
+    "authority": "Directorate of Industrial Safety and Health (DISH)",
+    "section_label": "Factories Act 1948 Section 6 & 7",
+    "short_summary": "A factory licence must be obtained at least 15 days before initiating manufacturing. The occupier must submit Form 2 (Notice of Occupation) along with a Certificate of Stability in Form 1A signed by an authorized structural chartered engineer.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["factory licence", "dish", "form 2", "form 1a", "stability certificate"]
+  },
+  {
+    "id": "PASSAGE_10",
+    "title": "Boiler Registration and Hydraulic Testing",
+    "authority": "Directorate of Steam Boilers, Maharashtra",
+    "section_label": "Indian Boilers Act 1923 Section 7 & 14",
+    "short_summary": "Every steam boiler and economizer must be registered with the Directorate of Steam Boilers prior to being put into service. An inspector inspects the equipment, witnesses a hydraulic pressure test at 1.5 times the working pressure, and issues a certificate specifying the maximum permissible working pressure.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["boiler", "steam boilers", "hydraulic test", "ibr", "pressure vessel"]
+  },
+  {
+    "id": "PASSAGE_11",
+    "title": "Udyam MSME Registration Procedure",
+    "authority": "Ministry of Micro, Small and Medium Enterprises / DIC",
+    "section_label": "MSMED Act 2006 Notification S.O. 2119(E)",
+    "short_summary": "Udyam Registration is a completely paperless, self-declaration-based online registration for Micro, Small, and Medium enterprises. Classification is determined by investment in plant & machinery and annual turnover linked automatically via PAN and GSTN databases.",
+    "source_url": "https://udyamregistration.gov.in",
+    "is_summary_not_legal_text": true,
+    "keywords": ["udyam", "msme", "registration", "dic", "micro", "small", "medium"]
+  },
+  {
+    "id": "PASSAGE_12",
+    "title": "MIDC Industrial Land Allotment & Building Sanction",
+    "authority": "Maharashtra Industrial Development Corporation (MIDC)",
+    "section_label": "MIDC Disposal of Land Regulations & DCR",
+    "short_summary": "In planned MIDC industrial estates, building plan sanction is granted directly by the MIDC Special Planning Authority (SPA). Since the land is pre-zoned for industrial use, entrepreneurs are exempt from separate Non-Agricultural (NA) conversion permissions.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["midc", "land allotment", "building plan", "dcr", "planning authority", "na order"]
+  },
+  {
+    "id": "PASSAGE_13",
+    "title": "Non-Agricultural (NA) Land Permission (Non-MIDC)",
+    "authority": "Revenue & Forest Department / District Collector",
+    "section_label": "Maharashtra Land Revenue Code 1966 Section 44",
+    "short_summary": "For industrial projects outside MIDC zones on privately held agricultural land, formal conversion to Non-Agricultural (NA) industrial use must be obtained from the District Collector or Sub-Divisional Officer after obtaining zonal town planning clearance.",
+    "source_url": "https://aaplesarkar.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["na permission", "non-agricultural", "collector", "land revenue", "zoning"]
+  },
+  {
+    "id": "PASSAGE_14",
+    "title": "Industrial Electricity Grid Connection",
+    "authority": "Maharashtra State Electricity Distribution Co. Ltd. (MSEDCL)",
+    "section_label": "MSEDCL Industrial Supply Code & MERC Regulations",
+    "short_summary": "High Tension (HT) and Low Tension (LT) industrial electricity connections are applied through the single-window portal. MSEDCL conducts technical feasibility of the nearest substation, issues a demand note for infrastructure charges, and releases power following safety inspection by the Electrical Inspector.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["msedcl", "electricity", "power connection", "ht", "lt", "substation"]
+  },
+  {
+    "id": "PASSAGE_15",
+    "title": "Industrial Water Connection (MIDC & Municipal)",
+    "authority": "MIDC Water Works / Urban Local Body",
+    "section_label": "MIDC Water Supply Regulations Section 8",
+    "short_summary": "Industrial water connections in MIDC areas are sanctioned based on the water balance sheet submitted by the unit. Pipeline tapping, water meter calibration, and supply release are governed by statutory 15-day service-level agreements.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["water connection", "midc water", "kld", "water supply", "pipeline"]
+  },
+  {
+    "id": "PASSAGE_16",
+    "title": "Legal Metrology Packaged Commodities Registration",
+    "authority": "Department of Legal Metrology, Maharashtra",
+    "section_label": "Legal Metrology (Packaged Commodities) Rules 2011 Rule 27",
+    "short_summary": "Every manufacturer or packer who pre-packages commodities for commercial retail or wholesale sale must register their manufacturing facility with the Controller of Legal Metrology. Packaging labels must display net quantity, MRP, manufacturing date, and consumer grievance contact.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["legal metrology", "packaged commodities", "weights and measures", "label", "mrp"]
+  },
+  {
+    "id": "PASSAGE_17",
+    "title": "Contract Labour Principal Employer Registration",
+    "authority": "Office of the Commissioner of Labour",
+    "section_label": "Contract Labour (Regulation & Abolition) Act 1970 Sec 7",
+    "short_summary": "Any industrial establishment employing 50 or more contract workers on any day must register as a Principal Employer with the registering officer of the local Labour Commissionerate. Contractors providing manpower must hold corresponding labour contractor licences.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["contract labour", "principal employer", "labour licence", "labour commissioner"]
+  },
+  {
+    "id": "PASSAGE_18",
+    "title": "Food Safety Manufacturing Licence (FSSAI / FDA)",
+    "authority": "Food and Drug Administration (FDA), Maharashtra",
+    "section_label": "Food Safety and Standards Act 2006 Section 31",
+    "short_summary": "Food processing units with production capacity over 100 kg/day or annual turnover over ₹12 Lakh must obtain a State FSSAI Food Business Manufacturing Licence. Facilities must implement sanitary standard operating procedures (SSOP) and maintain certified water potability test reports.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["food safety", "fssai", "fda", "food processing", "potability", "ssop"]
+  },
+  {
+    "id": "PASSAGE_19",
+    "title": "Pharmaceutical Drug Manufacturing Licence",
+    "authority": "Food and Drug Administration (FDA), Maharashtra",
+    "section_label": "Drugs and Cosmetics Rules 1945 Form 25 & 28",
+    "short_summary": "Manufacturing of pharmaceutical formulations or active bulk drugs requires licences in Form 25/28 from FDA Maharashtra. Facilities must comply with WHO-GMP Schedule M specifications, validation of cleanroom HVAC systems, and employment of approved manufacturing and analytical chemists.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["drug licence", "fda", "pharmaceutical", "gmp", "schedule m", "chemist"]
+  },
+  {
+    "id": "PASSAGE_20",
+    "title": "Prior Environmental Clearance (EC Category B)",
+    "authority": "State Environment Impact Assessment Authority (SEIAA)",
+    "section_label": "EIA Notification 2006 Schedule Category B",
+    "short_summary": "Chemical, bulk drug, and large-scale industrial projects listed in Schedule Category B require prior Environmental Clearance from SEIAA Maharashtra. The process involves Terms of Reference (ToR) approval, baseline environmental monitoring, EIA report preparation, and State Expert Appraisal Committee (SEAC) review.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["environmental clearance", "ec", "seiaa", "seac", "eia", "tor", "category b"]
+  },
+  {
+    "id": "PASSAGE_21",
+    "title": "Deemed Approvals under Maharashtra Facilitation Law",
+    "authority": "MAITRI / State Government of Maharashtra",
+    "section_label": "Section 9 - Automatic Deemed Sanctions",
+    "short_summary": "Under the Maharashtra Industry Facilitation Framework, if a designated department fails to approve or reject an application within statutory SLA days and no legitimate query is pending, the portal can generate an automated Deemed Approval Certificate with full legal validity.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["deemed approval", "statutory timelines", "automatic approval", "maitri", "sla breach"]
+  },
+  {
+    "id": "PASSAGE_22",
+    "title": "Common Joint Inspection System Reforms",
+    "authority": "Directorate of Industries / MAITRI Nodal Cell",
+    "section_label": "Ease of Doing Business Inspection Reform Mandate",
+    "short_summary": "To eliminate harassment from multiple uncoordinated departmental inspections, Maharashtra implements the Common Inspection System. Inspections by Pollution Control, Fire Services, DISH (Factories), Labour, and Legal Metrology are synchronized into a single joint visit with mandatory prior notice and 48-hour online report uploading.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["joint inspection", "common inspection", "eodb", "synchronised visit", "inspection planner"]
+  },
+  {
+    "id": "PASSAGE_23",
+    "title": "Risk-Based Inspection and Scrutiny Protocol",
+    "authority": "State Empowered Committee on Regulatory Compliance",
+    "section_label": "Risk Categorization & Fast-Track Appraisal",
+    "short_summary": "Industrial applications are classified into Fast Track, Standard, or Detailed Scrutiny based on objective hazard scores, investment volume, and effluent profile. Fast Track enterprises benefit from reduced documentation, shortened SLA timelines, and exemption from routine pre-commissioning physical inspections.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["risk scrutiny", "risk based", "fast track", "hazard class", "exemption"]
+  },
+  {
+    "id": "PASSAGE_24",
+    "title": "Package Scheme of Incentives (PSI) Overview",
+    "authority": "Directorate of Industries, Maharashtra",
+    "section_label": "Maharashtra Industrial Policy 2019 / PSI 2024",
+    "short_summary": "The Package Scheme of Incentives provides financial assistance to industrial units based on geographic development tiers (Zone A to Zone D+). Eligible units can claim industrial capital subsidies, SGST fiscal incentives, electricity duty exemptions, and interest subvention for eligible investments.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["psi", "package scheme of incentives", "capital subsidy", "industrial policy", "sgst"]
+  },
+  {
+    "id": "PASSAGE_25",
+    "title": "Industrial Electricity Duty Exemption Scheme",
+    "authority": "Energy Department / Directorate of Industries",
+    "section_label": "PSI Electricity Duty Relief Notification",
+    "short_summary": "Eligible new industrial manufacturing units and units undertaking substantial capacity expansion in notified backward talukas (Zones B, C, D, D+) are 100% exempt from payment of state electricity duty for periods ranging from 7 to 10 years from the date of commercial production.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["electricity duty", "power concession", "energy subsidy", "psi", "duty exemption"]
+  },
+  {
+    "id": "PASSAGE_26",
+    "title": "Stamp Duty and Registration Fee Exemption",
+    "authority": "Revenue & Registration Department, Maharashtra",
+    "section_label": "Bombay Stamp Act 1958 Section 9 Remission Orders",
+    "short_summary": "Industrial enterprises acquiring land, executing lease agreements with MIDC, or executing mortgage deeds for term loans in notified industrial backward zones enjoy 100% exemption or concessional stamp duty under the State Industrial Policy.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["stamp duty", "registration fee", "remission", "land acquisition", "lease agreement"]
+  },
+  {
+    "id": "PASSAGE_27",
+    "title": "MSME Interest Subvention Scheme",
+    "authority": "Directorate of Industries / MSME Development Cell",
+    "section_label": "MSME Credit Support Initiative",
+    "short_summary": "Micro and Small industrial enterprises availing term loans from scheduled commercial banks for plant and machinery procurement are eligible for 5% annual interest subvention for up to 5 years, capped at ₹25 Lakh to ₹50 Lakh depending on district tier classification.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["interest subvention", "term loan", "msme subsidy", "bank loan", "finance"]
+  },
+  {
+    "id": "PASSAGE_28",
+    "title": "MSME Green and Cleaner Technology Assistance",
+    "authority": "Maharashtra Pollution Control Board & Directorate of Industries",
+    "section_label": "Environment & Cleaner Production Scheme",
+    "short_summary": "Assistance is granted to MSMEs installing energy-efficient machinery, rooftop solar, zero-liquid-discharge (ZLD) effluent plants, or adopting water recycling technologies. Financial assistance covers up to 50% of equipment cost, capped at ₹50 Lakh.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["clean technology", "green subsidy", "zld", "solar", "energy efficiency", "recycling"]
+  },
+  {
+    "id": "PASSAGE_29",
+    "title": "Export Promotion Support Scheme",
+    "authority": "Maharashtra Industrial Export Facilitation Cell",
+    "section_label": "State Export Strategy Notification",
+    "short_summary": "Enterprises engaged in manufacturing goods for international export are eligible for freight subsidies, international quality certification reimbursements (such as ISO, CE mark, US-FDA certifications), and participation subsidies for overseas industrial trade fairs.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["export", "freight subsidy", "iec", "iso certification", "overseas fair", "trade"]
+  },
+  {
+    "id": "PASSAGE_30",
+    "title": "Statutory Query Management and Clock Pausing Rules",
+    "authority": "MAITRI Single Window Administration",
+    "section_label": "Section 8 - Procedural Discipline for Departmental Queries",
+    "short_summary": "Departmental officers are permitted to raise clarifications or request missing documents only ONCE within the initial scrutiny period. The statutory SLA clock is automatically paused while awaiting the applicant's response and resumes immediately upon submission.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["query management", "clock pause", "scrutiny", "single query", "statutory clock"]
+  },
+  {
+    "id": "PASSAGE_31",
+    "title": "Three-Tier Grievance Redressal and Appeals Matrix",
+    "authority": "Right to Public Services Appellate Tribunal",
+    "section_label": "Right to Services Rules Sections 10-14",
+    "short_summary": "Applicants aggrieved by rejection or statutory SLA delay can file appeals across 3 defined levels: Level 1 Department Nodal Officer; Level 2 MAITRI Nodal Admin (after 3 days of unresolved SLA breach); Level 3 State Competent Authority / RTS Commissioner (after 7 days).",
+    "source_url": "https://aaplesarkar.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["grievance", "appeals", "escalation", "right to services", "appellate authority"]
+  },
+  {
+    "id": "PASSAGE_32",
+    "title": "Verified Data Vault and Document Reuse Policy",
+    "authority": "MAITRI Digital Governance Architecture",
+    "section_label": "Citizen Data Protection & Reuse Guidelines",
+    "short_summary": "Verified core enterprise attributes (PAN, Udyam number, MIDC plot allotment details, GSTIN) are securely vaulted. Once verified by any authorized department, they are automatically reused across subsequent approval applications to avoid repetitive uploads.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["data vault", "document reuse", "verified data", "single submit", "once only"]
+  },
+  {
+    "id": "PASSAGE_33",
+    "title": "Petroleum & Flammable Materials Storage Licencing (PESO)",
+    "authority": "Petroleum and Explosives Safety Organization (PESO) / Fire",
+    "section_label": "Petroleum Act 1934 & Rules 2002",
+    "short_summary": "Industrial enterprises storing bulk class A, B, or C petroleum products, LPG bulk tanks, or flammable chemicals above exempted threshold limits must obtain site clearance and storage licences from PESO along with District Magistrate / Fire Services concurrence.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["peso", "petroleum", "explosives", "flammable storage", "solvent tank", "lpg"]
+  },
+  {
+    "id": "PASSAGE_34",
+    "title": "Industrial Lift and Freight Elevator Licencing",
+    "authority": "Chief Electrical Inspectorate, Energy Department",
+    "section_label": "Maharashtra Lifts, Escalators & Moving Walks Act 2017",
+    "short_summary": "Permission to erect and operate passenger or industrial goods elevators requires prior submission of structural drawings, safety gear test certificates, and inspection by the Government Lift Inspector before commissioning.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["lift licence", "elevator", "electrical inspector", "hoist", "safety gear"]
+  },
+  {
+    "id": "PASSAGE_35",
+    "title": "Tree Transit and Felling Permissions in Industrial Zones",
+    "authority": "Tree Authority, Urban Development / Forest Department",
+    "section_label": "Maharashtra Protection & Preservation of Trees Act 1975",
+    "short_summary": "Clearing trees for industrial site grading requires application to the local Tree Authority. Units must commit to compensatory plantation (typically 3 to 5 saplings per tree cut) and deposit security guarantees.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["tree felling", "tree authority", "tree transit", "compensatory plantation"]
+  },
+  {
+    "id": "PASSAGE_36",
+    "title": "Professional Tax Registration (PTEC & PTRC)",
+    "authority": "Department of Goods and Services Tax, Maharashtra",
+    "section_label": "Profession Tax Act 1975 Sections 5 & 6",
+    "short_summary": "Industrial companies must obtain Profession Tax Enrolment Certificate (PTEC) for the enterprise itself, and Profession Tax Registration Certificate (PTRC) to deduct and remit statutory profession tax from employee monthly wages.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["profession tax", "ptec", "ptrc", "state tax", "employee tax"]
+  },
+  {
+    "id": "PASSAGE_37",
+    "title": "GST Registration Protocols for Manufacturing",
+    "authority": "State GST Commissionerate & Central CBIC",
+    "section_label": "Central & Maharashtra GST Act 2017 Section 22",
+    "short_summary": "Mandatory tax registration for manufacturing entities with aggregate turnover exceeding statutory threshold. Applications are validated against Aadhaar biometric authentication of authorized signatories and verified premises documentation.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["gst", "gstin", "state tax", "tax registration", "turnover"]
+  },
+  {
+    "id": "PASSAGE_38",
+    "title": "Provident Fund (EPFO) & Employee State Insurance (ESIC)",
+    "authority": "EPFO Regional Office & ESIC Directorate",
+    "section_label": "EPF Act 1952 & ESI Act 1948 Joint Registration",
+    "short_summary": "Factories engaging 20 or more persons are compulsorily covered under EPFO. Establishments engaging 10 or more employees with wages up to ₹21,000 per month are covered under ESIC for medical, maternity, and disability coverage.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["epfo", "esic", "provident fund", "social security", "workers insurance"]
+  },
+  {
+    "id": "PASSAGE_39",
+    "title": "Standing Orders Certification for Industrial Staff",
+    "authority": "Office of the Commissioner of Labour",
+    "section_label": "Industrial Employment (Standing Orders) Act 1946",
+    "short_summary": "Every industrial establishment employing 50 or more workmen must submit draft standing orders defining terms of employment, working hours, shift allocation, leave entitlement, and disciplinary procedure to the Certifying Officer.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["standing orders", "labour commissioner", "workmen", "shift timings", "disciplinary"]
+  },
+  {
+    "id": "PASSAGE_40",
+    "title": "Municipal Trade Licence in Industrial and Mixed Zones",
+    "authority": "Local Municipal Corporation / Zilla Parishad",
+    "section_label": "Maharashtra Municipal Corporations Act Section 376",
+    "short_summary": "Establishments operating within municipal or panchayat jurisdictions must obtain a Municipal Trade Licence verifying trade sanitation, nuisance control, and solid waste segregation compliance.",
+    "source_url": "https://aaplesarkar.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["trade licence", "municipal licence", "sanitation", "local body", "gram panchayat"]
+  },
+  {
+    "id": "PASSAGE_41",
+    "title": "Plastic Waste Management Registration",
+    "authority": "Maharashtra Pollution Control Board (MPCB)",
+    "section_label": "Plastic Waste Management Rules 2016 & Extended Producer Responsibility (EPR)",
+    "short_summary": "Producers, importers, and brand owners (PIBOs) of plastic packaging or virgin plastic raw material processors must register under the MPCB EPR portal and fulfill annual post-consumer plastic collection targets.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["plastic waste", "epr", "mpcb", "packaging", "recycling target", "pibo"]
+  },
+  {
+    "id": "PASSAGE_42",
+    "title": "Demarcation of Power Quality and Open Access Norms",
+    "authority": "Maharashtra Electricity Regulatory Commission (MERC)",
+    "section_label": "MERC Open Access Regulations & Reliability Standards",
+    "short_summary": "Industrial consumers with connected load of 1 MW and above have the statutory right to source green or open-market electrical power through open access transmission while maintaining dedicated standby supply agreements with MSEDCL.",
+    "source_url": "https://maitri.mahaonline.gov.in/",
+    "is_summary_not_legal_text": true,
+    "keywords": ["open access", "merc", "power quality", "1 mw", "green power", "electricity"]
+  }
+]

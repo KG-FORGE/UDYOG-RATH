@@ -1,0 +1,576 @@
+{
+  "version": "1.0.0",
+  "name": "Maharashtra Industrial Regulatory Ruleset 2026",
+  "updated_at": "2026-03-15T00:00:00Z",
+  "description": "Deterministic legal approval requirements under Maharashtra Industry Facilitation Framework, MAITRI, and Single Window Portal.",
+  "disclaimer": "Illustrative prototype data. Verify with the competent authority.",
+  "approvals": [
+    {
+      "id": "UDYAM_REG",
+      "name": "Udyam MSME Registration",
+      "authority": "District Industries Centre (DIC) / MoMSME",
+      "department_code": "DIC",
+      "legal_basis_label": "MSMED Act 2006 (Illustrative, verify with the department)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "investment_cr", "operator": "lte", "value": 50 }
+        ]
+      },
+      "prerequisites": [],
+      "parallel_group": "Group 1: Entity Establishment",
+      "sla_days": { "standard": 3, "fast_track": 1 },
+      "fee_label": "Nil (Government Fee Exempt) (Illustrative)",
+      "documents": [
+        { "code": "PAN_CARD", "name": "Enterprise PAN Card", "mandatory": true, "validators": ["file_size", "pan_format", "name_match"], "accepted_formats": ["pdf", "jpg", "png"] },
+        { "code": "AADHAAR_PROP", "name": "Promoter Aadhaar / Identity Proof", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf", "jpg"] }
+      ],
+      "reason_template": "Required for MSME status as proposed investment of ₹{investment_cr} Cr is within the ₹50 Cr MSME threshold."
+    },
+    {
+      "id": "GST_REG",
+      "name": "GST Registration (State GST & CGST)",
+      "authority": "Department of Goods and Services Tax, Maharashtra",
+      "department_code": "GST",
+      "legal_basis_label": "Maharashtra Goods and Services Tax Act 2017 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "investment_cr", "operator": "gte", "value": 0 }
+        ]
+      },
+      "prerequisites": ["UDYAM_REG"],
+      "parallel_group": "Group 1: Entity Establishment",
+      "sla_days": { "standard": 7, "fast_track": 3 },
+      "fee_label": "Nil (Illustrative)",
+      "documents": [
+        { "code": "PAN_CARD", "name": "Enterprise PAN Card", "mandatory": true, "validators": ["file_size", "name_match"], "accepted_formats": ["pdf"] },
+        { "code": "BANK_PROOF", "name": "Bank Account Statement / Cancelled Cheque", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "PREMISES_PROOF", "name": "Proof of Business Premises / Lease Agreement", "mandatory": true, "validators": ["file_size", "address_match"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Mandatory tax registration for conducting commercial manufacturing or trading activity in Maharashtra."
+    },
+    {
+      "id": "PT_REG",
+      "name": "Professional Tax Registration (PTEC & PTRC)",
+      "authority": "State Tax Department, Maharashtra",
+      "department_code": "GST",
+      "legal_basis_label": "Maharashtra State Tax on Professions, Trades, Callings and Employments Act 1975 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "employees", "operator": "gte", "value": 1 }
+        ]
+      },
+      "prerequisites": ["GST_REG"],
+      "parallel_group": "Group 1: Entity Establishment",
+      "sla_days": { "standard": 5, "fast_track": 2 },
+      "fee_label": "₹2,500 annual enrolment fee (Illustrative)",
+      "documents": [
+        { "code": "PAN_CARD", "name": "Enterprise PAN Card", "mandatory": true, "validators": ["file_size", "name_match"], "accepted_formats": ["pdf"] },
+        { "code": "MOA_PARTNERSHIP", "name": "Certificate of Incorporation / Partnership Deed", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required because unit engages {employees} employee(s) liable for statutory profession tax deduction."
+    },
+    {
+      "id": "EPFO_ESIC_REG",
+      "name": "Provident Fund (EPFO) & ESIC Registration",
+      "authority": "Labour Commissionerate / EPFO & ESIC Joint Portal",
+      "department_code": "LABOUR",
+      "legal_basis_label": "Employees' Provident Funds and Miscellaneous Provisions Act 1952 & ESI Act 1948 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "employees", "operator": "gte", "value": 10 }
+        ]
+      },
+      "prerequisites": ["GST_REG"],
+      "parallel_group": "Group 1: Entity Establishment",
+      "sla_days": { "standard": 3, "fast_track": 1 },
+      "fee_label": "Nil (Illustrative)",
+      "documents": [
+        { "code": "PAN_CARD", "name": "Enterprise PAN Card", "mandatory": true, "validators": ["file_size", "name_match"], "accepted_formats": ["pdf"] },
+        { "code": "EMPLOYEE_LIST", "name": "Employee Roll with Aadhaar/UAN records", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required because enterprise workforce of {employees} persons meets the threshold for social security coverage."
+    },
+    {
+      "id": "NA_ORDER",
+      "name": "Non-Agricultural (NA) Land Permission",
+      "authority": "Revenue & Forest Department, Maharashtra / District Collector",
+      "department_code": "REVENUE",
+      "legal_basis_label": "Maharashtra Land Revenue Code 1966 Section 44 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "is_midc", "operator": "eq", "value": false },
+          { "field": "stage", "operator": "in", "value": ["new", "expansion"] }
+        ]
+      },
+      "prerequisites": [],
+      "parallel_group": "Group 2: Land & Pre-Construction",
+      "sla_days": { "standard": 45, "fast_track": 30 },
+      "fee_label": "₹0.50 per sq. meter conversion premium (Illustrative)",
+      "documents": [
+        { "code": "7_12_EXTRACT", "name": "Record of Rights (7/12 Extract) or Property Card", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "ZONE_CERT", "name": "Town Planning Zonal Certificate", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required because project is situated outside MIDC industrial area on private land undergoing {stage} development."
+    },
+    {
+      "id": "BUILDING_PERMIT",
+      "name": "Industrial Building Plan Sanction",
+      "authority": "MIDC Special Planning Authority / Municipal Corporation",
+      "department_code": "MIDC",
+      "legal_basis_label": "Maharashtra Regional and Town Planning (MRTP) Act 1966 & MIDC DCR (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "stage", "operator": "in", "value": ["new", "expansion"] }
+        ]
+      },
+      "prerequisites": [],
+      "parallel_group": "Group 2: Land & Pre-Construction",
+      "sla_days": { "standard": 30, "fast_track": 15 },
+      "fee_label": "Scrutiny fee calculated per sq. meter built-up area (Illustrative)",
+      "documents": [
+        { "code": "ARCH_PLAN", "name": "Architectural Layout and Structural Stability Drawings", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "LAND_ALLOTMENT", "name": "MIDC Allotment Letter / Land Title Deed", "mandatory": true, "validators": ["file_size", "name_match"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required for construction of new factory structures or civil expansion at {district} location."
+    },
+    {
+      "id": "TREE_TRANSIT",
+      "name": "Tree Felling / Transit Permission",
+      "authority": "Tree Authority, Local Municipal Body / Forest Department",
+      "department_code": "LOCAL_BODY",
+      "legal_basis_label": "Maharashtra (Urban Areas) Protection and Preservation of Trees Act 1975 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "stage", "operator": "in", "value": ["new", "expansion"] },
+          { "field": "investment_cr", "operator": "gte", "value": 10 }
+        ]
+      },
+      "prerequisites": ["BUILDING_PERMIT"],
+      "parallel_group": "Group 2: Land & Pre-Construction",
+      "sla_days": { "standard": 21, "fast_track": 14 },
+      "fee_label": "₹1,000 per tree + compensatory plantation deposit (Illustrative)",
+      "documents": [
+        { "code": "TREE_SURVEY", "name": "Site Tree Census Plan and Compensatory Plan", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required for site clearance on large development footprint (₹{investment_cr} Cr capital outlay)."
+    },
+    {
+      "id": "ENV_CLEARANCE",
+      "name": "Prior Environmental Clearance (EC)",
+      "authority": "State Environment Impact Assessment Authority (SEIAA) Maharashtra",
+      "department_code": "ENVIRONMENT",
+      "legal_basis_label": "Environment Impact Assessment Notification 2006 & amendments (Illustrative)",
+      "conditions": {
+        "operator": "any",
+        "rules": [
+          { "field": "sector", "operator": "in", "value": ["chemicals", "pharmaceuticals"] },
+          { "field": "investment_cr", "operator": "gte", "value": 50 }
+        ]
+      },
+      "prerequisites": [],
+      "parallel_group": "Group 2: Land & Pre-Construction",
+      "sla_days": { "standard": 90, "fast_track": 60 },
+      "fee_label": "₹1,00,000 to ₹5,00,000 based on project cost (Illustrative)",
+      "documents": [
+        { "code": "EIA_REPORT", "name": "Environmental Impact Assessment Report & EMP", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "TOR_LETTER", "name": "Approved Terms of Reference (ToR)", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required because unit is in {sector} sector or has capital investment of ₹{investment_cr} Cr requiring Category B appraisal."
+    },
+    {
+      "id": "MPCB_CTE",
+      "name": "Consent to Establish (CTE)",
+      "authority": "Maharashtra Pollution Control Board (MPCB)",
+      "department_code": "MPCB",
+      "legal_basis_label": "Water Act 1974 & Air Act 1981 Section 25 & 21 (Illustrative)",
+      "conditions": {
+        "operator": "any",
+        "rules": [
+          { "field": "effluent", "operator": "eq", "value": true },
+          { "field": "hazardous", "operator": "eq", "value": true },
+          { "field": "sector", "operator": "in", "value": ["chemicals", "pharmaceuticals", "plastics", "engineering", "textiles", "food processing"] }
+        ]
+      },
+      "prerequisites": ["BUILDING_PERMIT"],
+      "parallel_group": "Group 3: Statutory Clearances",
+      "sla_days": { "standard": 45, "fast_track": 30 },
+      "fee_label": "₹25,000 - ₹2,00,000 tiered by capital gross block (Illustrative)",
+      "documents": [
+        { "code": "DPR_PROCESS", "name": "Manufacturing Process Flow Diagram & Water Balance", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "ETP_STP_PLAN", "name": "Effluent Treatment Plant (ETP/STP) Design Scheme", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "LAND_DOCS", "name": "Land Ownership / Possession Documents", "mandatory": true, "validators": ["file_size", "name_match"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Mandatory prior to plant construction for {sector} manufacturing with projected discharge/emissions."
+    },
+    {
+      "id": "FIRE_CLEARANCE",
+      "name": "Provisional Fire Safety Clearance (Fire NOC)",
+      "authority": "Maharashtra Fire Services / MIDC Fire Brigade",
+      "department_code": "FIRE",
+      "legal_basis_label": "Maharashtra Fire Prevention and Life Safety Measures Act 2006 (Illustrative)",
+      "conditions": {
+        "operator": "any",
+        "rules": [
+          { "field": "sector", "operator": "in", "value": ["chemicals", "pharmaceuticals", "plastics", "engineering", "textiles"] },
+          { "field": "power_kw", "operator": "gte", "value": 100 },
+          { "field": "storage_flammables", "operator": "eq", "value": true }
+        ]
+      },
+      "prerequisites": ["BUILDING_PERMIT"],
+      "parallel_group": "Group 3: Statutory Clearances",
+      "sla_days": { "standard": 30, "fast_track": 15 },
+      "fee_label": "Fire premium cess ₹10 per sq. meter built up (Illustrative)",
+      "documents": [
+        { "code": "FIRE_PLAN", "name": "Fire Fighting Hydrant & Evacuation Layout Plan", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "STABILITY_CERT", "name": "Structural Fire Resistance Certificate", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required for industrial facility with {power_kw} kW power load and combustible raw materials."
+    },
+    {
+      "id": "FACTORY_PLAN",
+      "name": "Factory Plan Approval",
+      "authority": "Directorate of Industrial Safety and Health (DISH), Maharashtra",
+      "department_code": "DISH",
+      "legal_basis_label": "Factories Act 1948 Section 6 & Maharashtra Factory Rules 1963 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "employees", "operator": "gte", "value": 10 },
+          { "field": "power_kw", "operator": "gte", "value": 1 }
+        ]
+      },
+      "prerequisites": ["BUILDING_PERMIT"],
+      "parallel_group": "Group 3: Statutory Clearances",
+      "sla_days": { "standard": 30, "fast_track": 15 },
+      "fee_label": "Plan scrutiny fee based on installed BHP / KW (Illustrative)",
+      "documents": [
+        { "code": "FACTORY_DRAWINGS", "name": "Factory Layout Plan showing machine spacing, ventilation & exits", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "PROCESS_FLOW", "name": "Description of Manufacturing Process with hazardous chemical list", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required for manufacturing enterprise engaging {employees} workers with power load {power_kw} kW under Section 2m(i)."
+    },
+    {
+      "id": "PESO_EXPLOSIVES",
+      "name": "Petroleum & Flammables Storage Licence / NOC",
+      "authority": "Petroleum and Explosives Safety Organization (PESO) / District Magistrate",
+      "department_code": "FIRE",
+      "legal_basis_label": "Petroleum Rules 2002 & Gas Cylinders Rules 2016 (Illustrative)",
+      "conditions": {
+        "operator": "any",
+        "rules": [
+          { "field": "storage_flammables", "operator": "eq", "value": true },
+          { "field": "sector", "operator": "in", "value": ["chemicals", "pharmaceuticals"] }
+        ]
+      },
+      "prerequisites": ["FIRE_CLEARANCE"],
+      "parallel_group": "Group 3: Statutory Clearances",
+      "sla_days": { "standard": 45, "fast_track": 30 },
+      "fee_label": "₹15,000 for storage capacity tier 1 (Illustrative)",
+      "documents": [
+        { "code": "SOLVENT_INVENTORY", "name": "Chemical Inventory & MSDS Sheets", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "SITE_ELEVATION", "name": "Explosive Storage Dike & Isolation Distance Drawing", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required due to planned bulk storage of flammable solvents/chemicals in {sector} operations."
+    },
+    {
+      "id": "MSEDCL_POWER",
+      "name": "Industrial High Tension / Low Tension Electricity Connection",
+      "authority": "Maharashtra State Electricity Distribution Co. Ltd. (MSEDCL)",
+      "department_code": "MSEDCL",
+      "legal_basis_label": "Electricity Act 2003 & MERC Regulations (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "power_kw", "operator": "gte", "value": 20 }
+        ]
+      },
+      "prerequisites": ["BUILDING_PERMIT"],
+      "parallel_group": "Group 4: Utilities & Infrastructure",
+      "sla_days": { "standard": 21, "fast_track": 10 },
+      "fee_label": "Security deposit & service connection charges per KW load (Illustrative)",
+      "documents": [
+        { "code": "OWNERSHIP_DOC", "name": "Ownership / Lease Agreement of Premises", "mandatory": true, "validators": ["file_size", "name_match", "address_match"], "accepted_formats": ["pdf"] },
+        { "code": "ELECTRICAL_DIAGRAM", "name": "Single Line Diagram (SLD) approved by Chartered Electrical Safety Engineer", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required for commissioning industrial electrical grid supply of {power_kw} kW."
+    },
+    {
+      "id": "MIDC_WATER",
+      "name": "Industrial Water Supply Connection",
+      "authority": "Maharashtra Industrial Development Corporation (MIDC) / Local Municipal Council",
+      "department_code": "MIDC",
+      "legal_basis_label": "MIDC Water Supply Regulations 1973 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "water_kld", "operator": "gte", "value": 5 }
+        ]
+      },
+      "prerequisites": ["BUILDING_PERMIT"],
+      "parallel_group": "Group 4: Utilities & Infrastructure",
+      "sla_days": { "standard": 15, "fast_track": 7 },
+      "fee_label": "Connection pipeline deposit & meter installation fee (Illustrative)",
+      "documents": [
+        { "code": "WATER_DEMAND_SHEET", "name": "Water Requirement Calculation & Recycled Water Plan", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "ALLOTMENT_ORDER", "name": "Plot Allotment Order / Water Pipeline Feasibility Map", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required to supply industrial water demand of {water_kld} KLD at project premises."
+    },
+    {
+      "id": "BOILER_REG",
+      "name": "Boiler Registration & Mountings Certificate",
+      "authority": "Directorate of Steam Boilers, Maharashtra",
+      "department_code": "DISH",
+      "legal_basis_label": "Boilers Act 1923 Section 7 & Indian Boiler Regulations 1950 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "boiler", "operator": "eq", "value": true }
+        ]
+      },
+      "prerequisites": ["FACTORY_PLAN"],
+      "parallel_group": "Group 5: Plant Equipment & Operation",
+      "sla_days": { "standard": 21, "fast_track": 14 },
+      "fee_label": "Inspection & hydraulic test fee based on boiler heating surface (Illustrative)",
+      "documents": [
+        { "code": "IBR_FORM_II", "name": "Manufacturer's Certificate (Form II, III, IV) under IBR", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "STEAM_LAYOUT", "name": "Steam Pipeline Layout & Stress Analysis Drawing", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Mandatory prior to firing steam boiler or pressure vessel indicated in plant profile."
+    },
+    {
+      "id": "LIFT_INSPECTOR",
+      "name": "Lift / Goods Elevator Erection & Operation Licence",
+      "authority": "Chief Electrical Inspectorate & Lift Inspection Authority, Energy Dept",
+      "department_code": "ENERGY",
+      "legal_basis_label": "Maharashtra Lifts, Escalators and Moving Walks Act 2017 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "investment_cr", "operator": "gte", "value": 15 },
+          { "field": "stage", "operator": "in", "value": ["new", "expansion"] }
+        ]
+      },
+      "prerequisites": ["MSEDCL_POWER"],
+      "parallel_group": "Group 5: Plant Equipment & Operation",
+      "sla_days": { "standard": 15, "fast_track": 10 },
+      "fee_label": "₹5,000 per elevator unit (Illustrative)",
+      "documents": [
+        { "code": "ELEVATOR_SPECS", "name": "Manufacturer Test Certificate and Safety Catch Mechanism Drawings", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required for multistory industrial structure with material handling hoists and freight lifts."
+    },
+    {
+      "id": "MPCB_CTO",
+      "name": "Consent to Operate (CTO)",
+      "authority": "Maharashtra Pollution Control Board (MPCB)",
+      "department_code": "MPCB",
+      "legal_basis_label": "Water Act 1974 & Air Act 1981 Section 26 & 21 (Illustrative)",
+      "conditions": {
+        "operator": "any",
+        "rules": [
+          { "field": "effluent", "operator": "eq", "value": true },
+          { "field": "hazardous", "operator": "eq", "value": true },
+          { "field": "sector", "operator": "in", "value": ["chemicals", "pharmaceuticals", "plastics", "engineering", "textiles", "food processing"] }
+        ]
+      },
+      "prerequisites": ["MPCB_CTE"],
+      "parallel_group": "Group 6: Final Operational Clearances",
+      "sla_days": { "standard": 45, "fast_track": 30 },
+      "fee_label": "Renewable operating consent fee based on capital investment (Illustrative)",
+      "documents": [
+        { "code": "CTE_COPY", "name": "Copy of previously granted Consent to Establish (CTE)", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "ETP_COMMISSION", "name": "ETP/APCD Commissioning Report & Treated Sample Analysis", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "CAPITAL_AUDIT", "name": "CA Certificate on Gross Fixed Capital Investment", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Mandatory prior to commercial manufacturing to verify environmental safeguards compliance."
+    },
+    {
+      "id": "MPCB_HAZ_WASTE",
+      "name": "Hazardous Waste Management Authorisation",
+      "authority": "Maharashtra Pollution Control Board (MPCB)",
+      "department_code": "MPCB",
+      "legal_basis_label": "Hazardous and Other Wastes (Management & Transboundary Movement) Rules 2016 (Illustrative)",
+      "conditions": {
+        "operator": "any",
+        "rules": [
+          { "field": "hazardous", "operator": "eq", "value": true },
+          { "field": "sector", "operator": "in", "value": ["chemicals", "pharmaceuticals", "plastics"] }
+        ]
+      },
+      "prerequisites": ["MPCB_CTE"],
+      "parallel_group": "Group 6: Final Operational Clearances",
+      "sla_days": { "standard": 30, "fast_track": 20 },
+      "fee_label": "₹10,000 for 5-year authorisation period (Illustrative)",
+      "documents": [
+        { "code": "CHWTSDF_MEMBERSHIP", "name": "Membership Certificate of Common Hazardous Waste TSDF (MEPL/MWML)", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "HAZ_STORAGE_PLAN", "name": "Dedicated Hazardous Waste Storage Shed Layout with containment", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Mandatory because unit generates hazardous chemical residues, spent solvents, or process sludge."
+    },
+    {
+      "id": "FACTORY_LICENCE",
+      "name": "Factory Licence Grant & Registration",
+      "authority": "Directorate of Industrial Safety and Health (DISH), Maharashtra",
+      "department_code": "DISH",
+      "legal_basis_label": "Factories Act 1948 Section 6 & 7 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "employees", "operator": "gte", "value": 10 },
+          { "field": "power_kw", "operator": "gte", "value": 1 }
+        ]
+      },
+      "prerequisites": ["FACTORY_PLAN", "FIRE_CLEARANCE"],
+      "parallel_group": "Group 6: Final Operational Clearances",
+      "sla_days": { "standard": 30, "fast_track": 15 },
+      "fee_label": "Schedule fee based on horsepower and max workforce (Illustrative)",
+      "documents": [
+        { "code": "STABILITY_CERT_1A", "name": "Certificate of Stability in Form 1A by Competent Person", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "NOTICE_OCCUPATION", "name": "Notice of Occupation in Form 2 under Section 7", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required before starting manufacturing operations with {employees} workers."
+    },
+    {
+      "id": "FINAL_FIRE_NOC",
+      "name": "Final Fire Safety Certificate (Fire NOC)",
+      "authority": "Maharashtra Fire Services / MIDC Fire Brigade",
+      "department_code": "FIRE",
+      "legal_basis_label": "Maharashtra Fire Prevention and Life Safety Measures Act 2006 Section 3 (Illustrative)",
+      "conditions": {
+        "operator": "any",
+        "rules": [
+          { "field": "sector", "operator": "in", "value": ["chemicals", "pharmaceuticals", "plastics", "engineering", "textiles"] },
+          { "field": "power_kw", "operator": "gte", "value": 100 }
+        ]
+      },
+      "prerequisites": ["FIRE_CLEARANCE"],
+      "parallel_group": "Group 6: Final Operational Clearances",
+      "sla_days": { "standard": 21, "fast_track": 10 },
+      "fee_label": "Nil (Covered under provisional clearance) (Illustrative)",
+      "documents": [
+        { "code": "COMPLETION_REPORT", "name": "Licensed Agency Installation & Testing Certificate (Form A)", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "INSURANCE_POLICY", "name": "Public Liability / Fire Insurance Policy Cover", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required post-installation of fire hydrants, detectors, and sprinkler system before occupancy."
+    },
+    {
+      "id": "FOOD_SAFETY_LIC",
+      "name": "State Food Safety Manufacturing Licence",
+      "authority": "Food and Drug Administration (FDA), Maharashtra / FSSAI",
+      "department_code": "FDA",
+      "legal_basis_label": "Food Safety and Standards Act 2006 & Regulations 2011 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "sector", "operator": "eq", "value": "food processing" }
+        ]
+      },
+      "prerequisites": ["BUILDING_PERMIT"],
+      "parallel_group": "Group 6: Final Operational Clearances",
+      "sla_days": { "standard": 30, "fast_track": 15 },
+      "fee_label": "₹5,000 per annum for State Manufacturing Licence (Illustrative)",
+      "documents": [
+        { "code": "FOOD_SAFETY_PLAN", "name": "Food Safety Management System (FSMS) Plan & Recall Procedure", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "WATER_POTABILITY", "name": "Water Potability Microbiological Test Report", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "TECHNICAL_PERSON", "name": "Qualifications & Appointment of Technical Food Chemist", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Mandatory statutory licence for processing, packaging, and commercial sale of food items."
+    },
+    {
+      "id": "DRUG_MFG_LIC",
+      "name": "Drug & Pharmaceutical Manufacturing Licence",
+      "authority": "Food and Drug Administration (FDA), Maharashtra",
+      "department_code": "FDA",
+      "legal_basis_label": "Drugs and Cosmetics Act 1940 & Rules 1945 Form 25/28 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "sector", "operator": "eq", "value": "pharmaceuticals" }
+        ]
+      },
+      "prerequisites": ["MPCB_CTE", "FACTORY_PLAN"],
+      "parallel_group": "Group 6: Final Operational Clearances",
+      "sla_days": { "standard": 60, "fast_track": 40 },
+      "fee_label": "₹15,000 inspection and licencing fee (Illustrative)",
+      "documents": [
+        { "code": "GMP_SITE_MASTER", "name": "Site Master File as per WHO-GMP Schedule M", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "HVAC_VALIDATION", "name": "Clean Room HVAC Validation & Air Balancing Report", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] },
+        { "code": "APPROVED_CHEMIST", "name": "Approved Manufacturing and Analytical Chemist Approvals", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Mandatory quality and standards clearance for pharmaceutical active ingredients / formulations."
+    },
+    {
+      "id": "LEGAL_METROLOGY",
+      "name": "Packaged Commodities Manufacturer Registration",
+      "authority": "Department of Legal Metrology, Maharashtra",
+      "department_code": "LEGAL_METROLOGY",
+      "legal_basis_label": "Legal Metrology Act 2009 & Packaged Commodities Rules 2011 (Illustrative)",
+      "conditions": {
+        "operator": "any",
+        "rules": [
+          { "field": "sector", "operator": "in", "value": ["food processing", "chemicals", "pharmaceuticals", "plastics"] }
+        ]
+      },
+      "prerequisites": ["GST_REG"],
+      "parallel_group": "Group 7: Trade & Commercial Readiness",
+      "sla_days": { "standard": 15, "fast_track": 7 },
+      "fee_label": "₹500 application fee (Illustrative)",
+      "documents": [
+        { "code": "LABEL_SPEC", "name": "Specimen of Package Label showing MRP, Net Qty, Batch No", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf", "jpg"] },
+        { "code": "PAN_CARD", "name": "Enterprise PAN Card", "mandatory": true, "validators": ["file_size", "name_match"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required for pre-packaging finished consumer goods with declared net weight or volume."
+    },
+    {
+      "id": "CONTRACT_LABOUR",
+      "name": "Principal Employer Registration (Contract Labour)",
+      "authority": "Office of the Commissioner of Labour, Maharashtra",
+      "department_code": "LABOUR",
+      "legal_basis_label": "Contract Labour (Regulation and Abolition) Act 1970 Section 7 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "employees", "operator": "gte", "value": 50 }
+        ]
+      },
+      "prerequisites": ["GST_REG"],
+      "parallel_group": "Group 7: Trade & Commercial Readiness",
+      "sla_days": { "standard": 15, "fast_track": 7 },
+      "fee_label": "Sliding scale ₹1,000 to ₹10,000 based on contract workers (Illustrative)",
+      "documents": [
+        { "code": "CONTRACTOR_AGREEMENT", "name": "Copy of Agreement with Staffing/Security Agencies", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Required because workforce scale ({employees} employees) involves deployed outsourced staffing."
+    },
+    {
+      "id": "IEC_CODE",
+      "name": "Importer-Exporter Code (IEC)",
+      "authority": "Directorate General of Foreign Trade (DGFT) / Industry Facilitation Cell",
+      "department_code": "EXPORT",
+      "legal_basis_label": "Foreign Trade (Development and Regulation) Act 1992 (Illustrative)",
+      "conditions": {
+        "operator": "all",
+        "rules": [
+          { "field": "export_activity", "operator": "eq", "value": true }
+        ]
+      },
+      "prerequisites": ["GST_REG"],
+      "parallel_group": "Group 7: Trade & Commercial Readiness",
+      "sla_days": { "standard": 2, "fast_track": 1 },
+      "fee_label": "₹500 DGFT application fee (Illustrative)",
+      "documents": [
+        { "code": "PAN_CARD", "name": "Enterprise PAN Card", "mandatory": true, "validators": ["file_size", "name_match"], "accepted_formats": ["pdf"] },
+        { "code": "BANK_CERT", "name": "Bank Certificate / Cancelled Cheque with preprinted account name", "mandatory": true, "validators": ["file_size"], "accepted_formats": ["pdf"] }
+      ],
+      "reason_template": "Mandatory foreign trade identifier because enterprise profile indicates international export activities."
+    }
+  ]
+}

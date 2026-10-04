@@ -1,0 +1,45 @@
+:root {
+  /* Official UDYOGRATH SIH26130 Design Tokens (Fixed) */
+  --navy: #17375E;
+  --blue: #1F4E8C;
+  --saffron: #E8871E;
+  --green: #138808;
+  --bg: #F4F6F9;
+  --panel: #FFFFFF;
+  --border: #C9D1DC;
+  --text: #1B1B1B;
+  --muted: #4A5568;
+  --danger: #B3261E;
+  --success: #1E7B34;
+  --warn-bg: #FFF4D6;
+  --warn-text: #6B4A00;
+  --info-bg: #E8F0FA;
+
+  /* Typography */
+  --font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-devanagari: 'Noto Sans Devanagari', 'Noto Sans', sans-serif;
+  --font-base-size: 16px;
+  --line-height: 1.5;
+
+  /* Shape & Borders: Flat, Government GIGW Style */
+  --border-radius: 2px;
+  --border-width: 1px;
+}
+
+/* High Contrast Theme */
+body.high-contrast {
+  --navy: #000000;
+  --blue: #003366;
+  --saffron: #D06000;
+  --green: #006600;
+  --bg: #FFFFFF;
+  --panel: #FFFFFF;
+  --border: #000000;
+  --text: #000000;
+  --muted: #222222;
+  --danger: #990000;
+  --success: #006600;
+  --warn-bg: #FFF8E0;
+  --warn-text: #000000;
+  --info-bg: #F0F4F8;
+}

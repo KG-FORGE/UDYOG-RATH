@@ -1,0 +1,348 @@
+@import "@fontsource/noto-sans/400.css";
+@import "@fontsource/noto-sans/600.css";
+@import "@fontsource/noto-sans/700.css";
+@import "@fontsource/noto-sans-devanagari/400.css";
+@import "@fontsource/noto-sans-devanagari/600.css";
+@import "@fontsource/noto-sans-devanagari/700.css";
+@import "./tokens.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-base-size);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
+}
+
+body[lang="mr"], body[lang="hi"] {
+  font-family: var(--font-family-devanagari);
+}
+
+/* Accessibility Focus States */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--saffron);
+  outline-offset: 1px;
+}
+
+/* Skip link for screen-reader & keyboard accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: var(--navy);
+  color: #FFFFFF;
+  padding: 8px 12px;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: bold;
+}
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Common Layout Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.15rem; }
+
+/* Rectangular Flat Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--navy);
+  color: #FFFFFF;
+  border-color: var(--navy);
+}
+.btn-primary:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--navy);
+  border-color: var(--border);
+}
+.btn-secondary:hover {
+  background-color: var(--bg);
+  border-color: var(--navy);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: #FFFFFF;
+  border-color: var(--danger);
+}
+.btn-danger:hover {
+  background-color: #8E1F18;
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+
+/* Rectangular Panels */
+.gov-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+
+.gov-panel-header {
+  background: var(--navy);
+  color: #FFFFFF;
+  padding: 10px 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gov-panel-body {
+  padding: 16px;
+}
+
+/* Instruction & Notice Boxes */
+.instruction-box {
+  padding: 12px 16px;
+  border-radius: var(--border-radius);
+  margin-bottom: 16px;
+  border-left: 4px solid;
+  font-size: 0.92rem;
+}
+
+.instruction-info {
+  background-color: var(--info-bg);
+  border-color: var(--blue);
+  color: #0F2D54;
+}
+
+.instruction-warn {
+  background-color: var(--warn-bg);
+  border-color: var(--saffron);
+  color: var(--warn-text);
+}
+
+.instruction-danger {
+  background-color: #FDF2F2;
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* Rectangular Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: var(--border-radius);
+  border: 1px solid;
+}
+
+.status-Draft {
+  background-color: #E2E8F0;
+  color: #4A5568;
+  border-color: #CBD5E0;
+}
+
+.status-Submitted {
+  background-color: var(--info-bg);
+  color: var(--blue);
+  border-color: #B8D2F2;
+}
+
+.status-Under_Scrutiny, .status-UnderScrutiny {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border-color: #FCD34D;
+}
+
+.status-Query_Raised, .status-QueryRaised {
+  background-color: #FFEDD5;
+  color: #C2410C;
+  border-color: #FDBA74;
+}
+
+.status-Inspection_Scheduled, .status-InspectionScheduled {
+  background-color: #EDE9FE;
+  color: #5B21B6;
+  border-color: #DDD6FE;
+}
+
+.status-Approved {
+  background-color: #DCFCE7;
+  color: #166534;
+  border-color: #86EFAC;
+}
+
+.status-Rejected {
+  background-color: #FEE2E2;
+  color: var(--danger);
+  border-color: #FCA5A5;
+}
+
+.status-Renewal_Due, .status-RenewalDue {
+  background-color: #CCFBF1;
+  color: #115E59;
+  border-color: #5EEAD4;
+}
+
+/* Formal Administrative Tables */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  background: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.gov-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.gov-table th {
+  background-color: #F0F4F8;
+  color: var(--navy);
+  font-weight: 700;
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+}
+
+.gov-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #E2E8F0;
+  color: var(--text);
+  vertical-align: top;
+}
+
+.gov-table tr:nth-child(even) {
+  background-color: #FAFCFE;
+}
+
+.gov-table tr:hover {
+  background-color: #F1F5F9;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+
+.req-star {
+  color: var(--danger);
+  margin-left: 2px;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  background-color: #FFFFFF;
+  color: var(--text);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--blue);
+}
+
+.form-help {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Tabs */
+.tabs-strip {
+  display: flex;
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: #E8EEF5;
+  color: var(--navy);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  cursor: pointer;
+  margin-right: 4px;
+  border-radius: 2px 2px 0 0;
+}
+
+.tab-btn.active {
+  background: var(--navy);
+  color: #FFFFFF;
+  border-color: var(--navy);
+}
+
+/* What's New Notice Tag */
+.new-tag {
+  background-color: var(--saffron);
+  color: #FFFFFF;
+  padding: 1px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 2px;
+  margin-right: 8px;
+}
