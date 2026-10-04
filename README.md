@@ -4,8 +4,8 @@
 
 Smart India Hackathon 2026 prototype | Problem Statement **SIH26130** | Government of Maharashtra | Team **KG-FORGE**
 
-> **Disclaimer:** UDYOGRATH is a hackathon prototype. It is not an official Government of Maharashtra website and is not connected to any government system. All approvals data, timelines, fees, incentives and statistics are **illustrative**. Verify requirements with the competent authority before acting on them.
-
+> **Disclaimer:** UDYOGRATH is a hackathon prototype. It is not an official Government of Maharashtra website and is not connected to any government system. All approvals data, timelines, fees, incentives and statistics are **illustrative**.
+> 
 ## Project Preview
 
 ![UDYOGRATH Home Page](screenshots/home-page.png)
